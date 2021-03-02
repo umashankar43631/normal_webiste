@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>login/signup</title>
+        <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    </head>
+    <body>
+
+        {% if register_status and not user.is_authenticated %}
+            <h1>Thank you for registering</h1>
+        {% else %}
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='register()' class='toggle-btn'> Signup </button>
+                </div> 
+                
+                <form method = "POST" enctype="multipart/form-data" id="register" class="input-group-register needs-validation" novalidate oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'> 
+                    {{user_form}}
+                    {% csrf_token %}
+                    
+                    <input type="text" class="input-field" id="firstname" placeholder="First Name" name = "first_name" required>
+                    <div class="invalid-feedback">Please enter a valid first name.</div>
+                    <input type="text" class="input-field" id="lastname" name = "last_name" placeholder="Last Name" required>
+                    <div class="invalid-feedback">Please enter a valid last name.</div>
+                    <input type="email" class="input-field" id="email" name = "emailid" placeholder="Email" required>
+                    <div class="invalid-feedback">Please enter a valid Email Address.</div>
+                    <input type="number" class="input-field" id="mobile" name = "number" placeholder="Mobile" required>
+                    <div class="invalid-feedback">Please enter your Mobile Number.</div>
+                    <input type="password" class="input-field" id="password" placeholder="Enter Password" name="up" required>
+                    <div class="invalid-feedback">Please enter your password.</div>
+                    <input type="password" class="input-field" id="confirmpassword" placeholder="Confirm Password" name="up2" required>
+                    <div class="invalid-feedback">Password doesn't match.</div>
+                    <input type="checkbox" class="check-box" required> <span> I agree to the Terms & Conditions </span>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
+                    <button type="submit" name = "signup" class="submit-btn" value="Check Form"> SignUp </button>
+                </form>
+            </div>
+        </div>            
+
+         <script> 
+            var y=document.getElementById('register');
+            var z=document.getElementById('btn');
+            function register(){
+                y.style.left = '50px';
+                z.style.left = '110px';
+            }
+
+        </script>  -->
+
+
+        
+
+        <script>
+            (() => {
+                'use strict';
+
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.prototype.slice.call(forms).forEach((form) => {
+                console.log(forms, "fdjkhrksdj");
+            form.addEventListener('submit', (event) => {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+        }, false);
+    });
+    })();
+
+        </script>
+
+    {% endif %}
+    </body>
+</html>

@@ -1,0 +1,123 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;/*"montserrat",sans-serif;*/
+  background-image:url("../images/back.jpg' %}");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.services{
+
+  text-align: center;
+}
+.services h1{
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 4px solid #3498db;
+  font-size: 30px;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  font-weight: bold;
+  color: white;
+}
+.services p marquee i{
+  font-size: 25px;
+  color: white;
+}
+ul.list1{
+  list-style-type: none;
+  text-align: justify;
+  font-weight: bold;
+}
+ul.list2{
+  list-style-type: none;
+  text-align: justify;
+  font-weight: bold;
+}
+ul.list3{
+  list-style-type: none;
+  text-align: justify;
+  font-weight: bold;
+}
+ul.list4{
+  list-style-type: none;
+  text-align: justify;
+  font-weight: bold;
+}
+ul.list5{
+  list-style-type: none;
+  text-align: justify;
+  font-weight: bold;
+}
+ul.list6{
+  list-style-type: none;
+  text-align: justify;
+  font-weight: bold;
+}
+.cen{
+  max-width: 1200px
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+.service{
+  display: inline-block;
+  width: calc(100% / 3);
+  margin: 0 -2px;
+  padding: 20px;
+  box-sizing: border-border-box;
+  transition: 0.4s;
+
+}
+.service i:hover{
+  background: #ddd;
+}
+.service h2:hover{
+  background: #ddd;
+}
+.addi{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+.service i{
+  color: #3498db;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.service h2{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+
+}
+.service{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+@media screen and (max-width: 800px){
+  .service{
+    width: 50px;
+  }
+}
+@media screen and (max-width: 500px){
+  .service{
+    width: 100px;
+  }
+}
+.social{
+  font-size: 40px;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: inherit;
+  box-sizing: border-border-box;
+  border-color: : #0fffff;
+  color: #0fffff;
+}
+ .social i:hover{
+  background: black;
+}
